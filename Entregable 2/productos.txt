@@ -1,0 +1,1 @@
+[{"name":"Remera","price":"1500","img":"thumbnail.jpg","id":1}{"name":"Zapatilla","price":"1200","img":"thumbnail.jpg","id":3},{"name":"Pantalon","price":"1800","img":"thumbnail.jpg","id":2}]
