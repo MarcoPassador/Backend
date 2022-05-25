@@ -1,0 +1,26 @@
+html 
+    head
+        title Productos 
+
+    body 
+        if productos.length
+            h2 Productos ingresados
+            table
+                thead 
+                    tr 
+                        th Nombre 
+                        th Precio 
+                        th Imagen 
+                        th Id
+                tbody 
+                each elem in productos
+                    tr 
+                        th=elem.title
+                        th=elem.price
+                        th
+                            img(src=elem.thumbnail)
+                        th=elem.id
+        else 
+            h2 No se han ingresado productos
+            
+        a(href="/api") Regresar al formulario

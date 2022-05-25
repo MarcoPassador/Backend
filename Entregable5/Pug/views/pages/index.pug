@@ -1,0 +1,18 @@
+html
+    head 
+        title Formulario de ingreso de productos pug
+    body 
+        h2 Ingrese un producto
+        form(action="/api/productos" method="post" class="myForm" enctype="application/json")
+            div
+                label(for="title") Nombre
+                input(type="text" name="name")
+            div
+                label(for="price") Precio
+                input(type="number" name="price")
+            div
+                label(for="thumbnail") Imagen del producto
+                input(type="text" name="thumbnail")
+            button(type="submit" ) Enviar
+        a(href="/api/productos") Ver productos ingresados
+            

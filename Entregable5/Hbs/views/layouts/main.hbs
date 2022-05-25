@@ -1,0 +1,18 @@
+{{> header}}
+
+<form class="form" action="/api/productos" enctype="application/json" method="post">
+    <h2>Carga un producto:</h2>
+    <label for="name">Nombre:</label>
+    <input type="text" id="name" name="name"><br><br>
+    <label for="price">Precio:</label>
+    <input type="text" id="price" name="price"><br><br>
+    <label for="thumbnail">Ingrese link de imagen del producto</label>
+    <input type="text" name="thumbnail"><br><br>
+    <input type="submit" value="Enviar">
+</form>
+<br>
+<a href="/api/productos">Productos ingresados</a>
+
+<br>
+
+{{> footes}}

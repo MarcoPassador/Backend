@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de ingreso de productos</title>
+</head>
+<body>
+    <%- include("../partials/header.ejs"); %>
+    <% if (productos.length) { %>
+        <h2>Productos ingresados</h2>
+        <table>
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Imagen</th>
+                <th>Id</th>
+              </tr>
+            </thead>
+            <tbody>
+            <% productos.forEach(elem => {  %>
+              <tr>
+                <th><%-elem.name%></th>
+                <th><%-elem.price%></th>
+                <th><img src="<%-elem.thumbnail%>"/></th>
+                <th><%-elem.id%></th>
+              </tr>
+              <% } ) %>
+            </tbody>
+          </table>
+    <% } else { %>
+            <h2>No se encontraron productos</h2>
+            <% } %>
+    <a href="/api/">Volver al formulario</a>
+    <%- include("../partials/footer.ejs"); %>
+</body>
+</html>

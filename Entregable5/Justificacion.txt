@@ -1,0 +1,1 @@
+Para mi proyecto, prefiero utilizar el motor de plantillas handlebars, ya que me parece el mas comodo de utilizar al ser "semejante" con html, aunque las configuraciones del lado del servidor pueden llegar a ser un poco molestas y tediosas. 

@@ -46,14 +46,6 @@ router.post('/productos', (req, res) => {
     return myApi.postProduct(req, res)
  })
 
-router.put("/productos/:id", (req, res) => {
-    return myApi.putProduct(req, res)
-})
-
-router.delete("/productos/:id", (req, res) => {
-    return myApi.deleteProduct(req, res)
-})
-
 app.get("/", (req, res) => {
     res.sendFile(__dirname + "/index.html");
 });

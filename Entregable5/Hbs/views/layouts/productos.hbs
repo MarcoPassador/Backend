@@ -1,0 +1,29 @@
+{{#if productos.length}}
+{{> header}}
+
+<table>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Imagen</th>
+            <th>Id</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each productos}}
+        <tr>
+            <th>{{this.name}}</th>
+            <th>{{this.price}}</th>
+            <th><img style="height:auto; width:50px;" src="{{this.thumbnail}}"></th>
+            <th>{{this.id}}</th>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+<a href="/api/">Volver a ingresar productos</a>
+{{> footes}}
+
+{{else}}
+<h1>No se encontraron productos</h1>
+{{/if}}
