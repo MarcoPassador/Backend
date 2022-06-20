@@ -1,0 +1,48 @@
+{{> header}}
+
+<form class="form" action="/api/productos" enctype="application/json" method="post">
+    <h2>Carga un producto:</h2>
+    <label for="name">Nombre:</label>
+    <input type="text" id="name" name="name"><br><br>
+    <label for="price">Precio:</label>
+    <input type="text" id="price" name="price"><br><br>
+    <label for="thumbnail">Ingrese link de imagen del producto</label>
+    <input type="text" name="thumbnail"><br><br>
+    <input type="submit" value="Enviar">
+</form>
+<br>
+        <div class="Subcontainer">
+            <h2>Productos ingresados</h2>
+            <table class="table table-dark">
+                <thead>
+                <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Imagen</th>
+                    <th scope="col">ID</th>
+                </tr>
+                </thead>
+                <tbody id="element"></tbody>
+            </table>
+        </div>
+
+<br>
+<div class="Chat">
+            <h2>Chat</h2>
+            <form onsubmit="return addMessage(this)" class="chatForm">
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Tu email" required>
+                </div>
+                <div class="mensajes"></div>
+                <div class="form-group">
+                    <input type="text" id="texto" placeholder="Envia un mensaje">
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>   
+        </div> 
+<br>
+<a href="/api/productos">Productos ingresados</a>
+
+<br>
+
+{{> footes}}

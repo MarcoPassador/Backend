@@ -1,18 +1,34 @@
 
 class Api {
-    constructor(productos) {
-        this.productos = productos;
+    constructor(archivo) {
+        this.archivo = archivo;
     }
 
-    getProducts(req, res) {
-        res.json({productos: this.productos});
+     async getProductsJSON(req, res) {
+        try{
+            const data = await fs.promises.readFile(this.archivo, "utf-8")
+            const objetos = data ? (JSON.parse(data)) : []
+            res.json({productos: objetos});
+        } 
+        catch(err) {
+            console.log(err)
+        }
     }
 
-    getProduct(req, res) {
-        const producto = this.productos.find(elem => elem.id === Number(req.params.id))
-        const prodIndex = this.productos.findIndex(elem => elem.id === Number(req.params.id))
-        console.log(prodIndex);
+    async getProducts(req, res){
+        try{
+            const data = await fs.promises.readFile(this.archivo, "utf-8")
+            const objetos = data ? (JSON.parse(data)) : []
+            return objetos;
 
+        } catch(err){
+            console.log(err)
+        }
+    }
+
+    async getProduct(req, res) {
+        const objetos = await this.getProducts();
+        const producto = objetos.find(elem => elem.id === Number(req.params.id))
         if (producto) {
             res.json({producto})
         } else {

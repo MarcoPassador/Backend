@@ -1,0 +1,32 @@
+[
+    {
+        "name":"Remera",
+        "price":"1500",
+        "photo":"",
+        "id":"1",
+        "timestamp":"",
+        "code":"",
+        "desc":"Remera basica blanca",
+        "stock":"5"
+    },
+    {
+        "name":"Pantalon",
+        "price":"3500",
+        "photo":"",
+        "id":"2",
+        "timestamp":"",
+        "code":"",
+        "desc":"Pantalon de jean",
+        "stock":"2"
+    },
+    {
+        "name":"Gorro",
+        "price":"500",
+        "photo":"",
+        "id":"3",
+        "timestamp":"",
+        "code":"",
+        "desc":"Gorro de lana",
+        "stock":"7"
+    }
+]
