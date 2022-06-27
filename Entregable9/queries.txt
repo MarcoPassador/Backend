@@ -1,0 +1,88 @@
+use ecommerce
+
+
+//1 y 2
+const mensajes = [
+    {text: "Hola", email: "marcopassador@mail.com"},
+    {text: "Buenas", email: "jorge@gomez.com"},
+    {text: "Tardes", email: "marcopassador@mail.com"},
+    {text: "Como", email: "jorge@gomez.com"},
+    {text: "estan", email: "marcopassador@mail.com"},
+    {text: "espero", email: "jorge@gomez.com"},
+    {text: "que bien", email: "marcopassador@mail.com"},
+    {text: "-", email: "jorge@gomez.com"},
+    {text: "??", email: "marcopassador@mail.com"},
+    {text: "...", email: "marcopassador@mail.com"}
+]
+
+db.mensajes.insertMany(mensajes)
+
+const productos = [
+    {name: "Air Force 1", price: 1700, 
+    stock: 5, photo: "none", code: "fhtdr", desc: "Zapatillas de vestir hombre"},
+    {name: "Blazer Mid 77", price: 1280, 
+    stock: 5, photo: "none", code: "svgdr", desc: "Zapatillas de vestir hombre"},
+    {name: "Metcon 7", price: 4990, 
+    stock: 5, photo: "none", code: "crdavnts", desc: "Zapatillas de trail running"},
+    {name: "React Pegasus Trail 4", price: 150, 
+    stock: 5, photo: "none", code: "dvl", desc: "Zapatillas de trail running"},
+    {name: "React Infinity Run", price: 1230, 
+    stock: 5, photo: "none", code: "nvcts1", desc: "Zapatillas de trail running"},
+    {name: "Waffle One", price: 2300, 
+    stock: 5, photo: "none", code: "mbznts", desc: "Zapatillas de vestir mujer"},
+    {name: "Air Max Plus", price: 120, 
+    stock: 5, photo: "none", code: "ldlfn", desc: "Zapatillas de vestir mujer"},
+    {name: "Zoom Metcon Turbo 2", price: 200, 
+    stock: 0, photo: "none", code: "gss", desc: "Zapatillas de vestir mujer"},
+    {name: "Air Zoom Pegasus", price: 3000, 
+    stock: 5, photo: "none", code: "trr1", desc: "Zapatillas de trail running"},
+    {name: "Air Huarache", price: 1000, 
+    stock: 5, photo: "none", code: "zr3am", desc: "Zapatillas de trail running"},
+]
+
+db.productos.insertMany(productos)
+
+//3
+db.mensajes.find()
+
+//4
+db.productos.count()
+db.mensajes.count()
+
+
+//5
+//a
+db.productos.insertOne({name: "Air kukini", price: 1300, 
+stock: 5, photo: "none", code: "zr8am", desc: "Zapatillas de vestir hombre"})
+
+//b i
+db.productos.find({price: {$lt: 1000}})
+
+//b ii
+db.productos.find({ $and: [{price: {$gte: 1000}}, {price: {$lte: 3000}}]})
+
+//b iii
+db.productos.find({price: {$gt: 3000}})
+
+//b iv
+db.productos.find({}).sort({price:1}).skip(2).limit(1)
+
+//c
+db.productos.updateMany({}, {$set: {stock: 100}})
+
+//d
+db.productos.updateMany({price: {$gt: 4000}}, {$set: {stock: 0}})
+
+//e
+db.productos.deleteMany({price: {$lt: 1000}})
+
+//6
+db.createUser(
+    {
+        user: "pepe",
+        pwd: "asd456",
+        roles: [
+            { role: "read", db: "ecommerce"}
+        ]
+    }
+)
