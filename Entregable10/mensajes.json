@@ -1,0 +1,46 @@
+{
+  "id": "mensajes",
+  "mensajes": [
+    {
+      "_id":"62cc8222573f9b61077bf20a",
+      "author":{
+         "email":"marcopassador@outlook.com",
+         "nombre":"Marco",
+         "apellido":"Passador",
+         "edad":"18",
+         "alias":"Ronald",
+         "avatar":"https://bysperfeccionoral.com/wp-content/uploads/2020/01/136-1366211_group-of-10-guys-login-user-icon-png.jpg"
+      },
+      "text":"Prueba",
+      "time":"11/7/2022, 17:03:46"
+   },
+   {
+      "_id":"62cc86a39fd07fb1cd58a4c2",
+      "author":{
+         "email":"ianinti@yahoo.com.ar",
+         "nombre":"Damian",
+         "apellido":"Sosso",
+         "edad":"3",
+         "alias":"Ian",
+         "avatar":"https://bysperfeccionoral.com/wp-content/uploads/2020/01/136-1366211_group-of-10-guys-login-user-icon-png.jpg"
+      },
+      "text":"Hola",
+      "time":"11/7/2022, 17:22:59"
+   },
+   {
+      "_id":"62cc86c79fd07fb1cd58a4c6",
+      "author":{
+         "email":"marcopassador@outlook.com",
+         "nombre":"Marco",
+         "apellido":"Passador",
+         "edad":"18",
+         "alias":"Ronald",
+         "avatar":"https://bysperfeccionoral.com/wp-content/uploads/2020/01/136-1366211_group-of-10-guys-login-user-icon-png.jpg"
+      },
+      "text":"Buenas ",
+      "time":"11/7/2022, 17:23:35"
+   }
+    
+    
+  ]
+}
