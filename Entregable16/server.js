@@ -36,7 +36,7 @@ const io = new IOServer(httpServer);
 
 const router = Router();
 
-const PORT = myArgs.PORT || 8080;
+const PORT = process.env.PORT || 8080;
 
 if (myArgs.MODO === 'cluster') {
   if (cluster.isPrimary) {
@@ -171,7 +171,7 @@ passport.serializeUser((user, done) => {
 
 
 router.get("/", (req, res) => {
-  //return res.json({puerto: PORT}) //activar si se quiere verificar en que puertos cae esta ruta con nginx (8080)
+
   
     if (req.user) {
         req.session.user = req.user;
