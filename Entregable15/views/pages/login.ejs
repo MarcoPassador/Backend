@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicia sesión</title>
+    <%- include("../partials/loginHead.ejs"); %>
+</head>
+
+<body>
+
+    
+    <form action="/api/login" method="post" enctype="application/json" class="vh-100 gradient-custom">
+        <div>
+          <div>
+            <div>
+              <div>
+                <div>
+      
+                  <div>
+      
+                    <h>Iniciar sesión</h2>
+
+                    <p><%= message.join(", "); %></p>
+                    <p>Ingresa tu nombre de usuario y contraseña</p>
+      
+                    <di>
+                      <input type="text" id="username" name="username" required/>
+                      <label class="form-label" for="username">Nombre de usuario</label>
+                    </div>
+      
+                    <div>
+                      <input type="password" id="password" name="password" required />
+                      <label class="form-label" for="password">Contraseña</label>
+                    </div>
+      
+                    <button type="submit">Iniciar sesión</button>
+      
+                  </div>
+      
+                  <div>
+                    <p class="mb-0">¿No tenés una cuenta? <a href="/api/signup">Registrate</a>
+                    </p>
+                  </div>
+      
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </form>
+
+</body>
+
+</html>

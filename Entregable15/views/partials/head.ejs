@@ -1,0 +1,39 @@
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: sans-serif;
+        }
+        .Chat {
+            display: grid;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .Chat div{
+            margin-top: 10px;
+        }
+        .ChatMsgs{
+            margin: 30px 0;
+            padding: 10px;
+            border: solid black;
+            border-radius: 5px;
+        }
+        .Tabla{
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.9em;
+            min-width: 400px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+            border-radius: 5px;
+        }
+        img {
+            width: 7rem;
+            height: 9rem;
+        }
+        
+    </style>
+    <script src="/socket.io/socket.io.js"></script>

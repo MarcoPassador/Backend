@@ -1,0 +1,6 @@
+[2022-10-14T17:30:21.187] [WARN] warnOnly - ruta /favicon.ico método GET no implementada
+[2022-10-14T17:33:47.751] [WARN] warnOnly - ruta /api/photo-1665699108517.jpg método GET no implementada
+[2022-10-14T17:33:47.786] [WARN] warnOnly - ruta /api/none método GET no implementada
+[2022-10-14T17:33:51.039] [WARN] warnOnly - ruta /api/photo-1665699108517.jpg método GET no implementada
+[2022-10-14T17:34:00.037] [WARN] warnOnly - ruta /api/photo-1665699108517.jpg método GET no implementada
+[2022-10-14T17:34:00.068] [WARN] warnOnly - ruta /api/none método GET no implementada
